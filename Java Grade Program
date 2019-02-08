@@ -1,0 +1,28 @@
+package gradeprogram;
+import java.util.Scanner;
+
+public class GradeProgram {
+    
+    public static void main(String[] args) {
+       Scanner input = new Scanner(System.in);
+       
+       System.out.println("\nEnter in the first quiz score (out of 100): ");
+        int quiz1 = (input.nextInt());
+       
+       System.out.println("\nEnter in the second quiz score (out of 100): ");
+       int  quiz2 = input.nextInt();
+       
+       System.out.println("\nEnter in the third quiz score (out of 100): ");
+        int quiz3 = input.nextInt();
+       
+       System.out.println("\nEnter in the Midterm score (out of 100): ");
+        int midterm = input.nextInt();
+       
+       System.out.println("\nEnter in the Final Exam score (out of 100): ");
+        int exam = input.nextInt();
+       
+       Record newGrade = new Record(quiz1, quiz2, quiz3, midterm, exam);
+       System.out.println(); 
+       System.out.println(newGrade);
+    }
+}
