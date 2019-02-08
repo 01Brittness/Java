@@ -1,0 +1,62 @@
+package counter;
+
+public class Counter {
+
+private int increase, decrease, counter;
+private static final int MINIMUM = 0;
+
+public int setCurrent()
+    {
+        return counter = MINIMUM;
+    }
+
+public int increaseCounter(int increaseValue)
+    {
+        increase = increaseValue;
+        return counter += increase;
+    }
+
+public int decreaseCounter(int decreaseValue)
+    {
+        decrease = decreaseValue;
+        counter -= decrease;
+            if(counter < 0)
+	            {
+		            counter = MINIMUM;
+	            }
+                    else
+	                    {
+		                    return counter;
+	                    }
+        return counter;
+    }
+
+public void showCounter()
+    {
+	    System.out.println("Current counter is: " + counter);
+    }
+}
+
+public class CounterTest {
+
+	public static void main(String[] args){
+
+		Counter c = new Counter();
+
+		c.setCurrent();
+		c.showCounter();
+
+		c.increaseCounter(5);
+		c.showCounter();
+
+		c.decreaseCounter(3);
+		c.showCounter();
+
+		c.decreaseCounter(5);
+		c.showCounter();
+
+		c.increaseCounter(20);
+		c.showCounter();
+    }
+    
+}
